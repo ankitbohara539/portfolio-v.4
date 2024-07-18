@@ -10,9 +10,9 @@
 
 :root{
   --main-blue: #39418b;
-  --main-darkblue: #363943;
+  --main-darkblue: #131952e5;
   --main-white:#f1f1f1;
-  --main-lightblue:#385ec5;
+  --main-lightblue:#b79708;
   --main-white1:#fff;
 }
 html{
@@ -574,7 +574,7 @@ background-color: var(--main-darkblue);
   }
 
   .navbar .media-icons a{
-    flex-direction: column;
+    display: none;
   }
 
 }
@@ -598,11 +598,9 @@ background-color: var(--main-darkblue);
     top: 0;
     background:var(--main-darkblue);
     height: 100vh;
-    max-width: 250px;
-    width: 100%;
+    width: 50%;
     padding-top: 60px;
     flex-direction: column;
-    align-items: center;
     transition: all 0.6s ease;
   }
 
@@ -610,20 +608,14 @@ background-color: var(--main-darkblue);
     left: 0;
     
   }
-  .navbar .media-icons a{
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-  }
+
 
   nav .navbar .menu a {
     font-size: 23px;
-    display: block;
     color: var(--main-white1);
-    margin: 10px 0;
-    border-bottom: 3px solid #ffffff;
-    padding: 5px 100px;
-
+    display: block;
+    padding: 20px 0;
+    margin-left:20px ;
   }
 
   nav.sticky .menu a:hover {
@@ -640,7 +632,7 @@ background-color: var(--main-darkblue);
   }
 
   .contact-fluid {
-    width: 80%;
+    width: 90%;
   }
 
   .contact-fluid .container-c .row1 {
