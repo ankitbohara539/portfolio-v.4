@@ -661,6 +661,9 @@ background-color: var(--main-darkblue);
   .contact-fluid .container-c .row1 .col-md-7 {
     width: 100%;
   }
+  .contact-fluid .container-c .row1 .col-md-5 .contact_text .contact_items{
+    padding: 20px;
+  }
 
   .skills .boxes .box {
     margin: 20px 0;
