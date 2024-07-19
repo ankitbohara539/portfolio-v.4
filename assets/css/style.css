@@ -10,9 +10,9 @@
 
 :root{
   --main-blue: #1a294b;
-  --main-darkblue: #131741;
+  --main-darkblue: #131741da;
   --main-white:#f1f1f1;
-  --main-lightblue:#192bae;
+  --main-lightblue:#192aae;
   --main-white1:#fff;
 }
 html{
