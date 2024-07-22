@@ -157,7 +157,7 @@ nav.sticky .menu-btn {
 .hero_section {
   height: 100%;
   width: 100%;
-  background: url("./bgnn.png") no-repeat;
+  background: url("./images/bgnn.png") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -234,7 +234,7 @@ nav.sticky .menu-btn {
 }
 
 
-/* About Section Styling */
+/*Section Styling */
 
 
 /* Those Elements Where i Have Apply Same CSS,
@@ -254,116 +254,33 @@ section {
 }
 
 section .content {
-  width: 80%;
+  width: 100%;
   margin: 40px auto;
 
 }
 
-.about .about-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-section .title {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-section .title span {
-  color: var(--main-darkblue);
-  font-size: 30px;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 8px;
-}
-
-section .title span::before,
-section .title span::after {
-  content: '';
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: var(--main-blue);
-  left: 0;
-  bottom: 0;
-}
-
-section .title span::after {
-  bottom: -7px;
-  width: 70%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.about .about-details .left {
-  width: 45%;
-}
-
-.about .left img {
-  width: 80%;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid black;
-}
-
-.about-details .right {
-  width: 100%;
-}
-
-section .topic {
-  color: var(--main-darkblue);
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.about-details .right p {
-  font-family: 'Times New Roman', Times, serif;
-  text-align: justify;
-  font-weight: 500;
-}
-
-section .button {
-  margin: 16px 0;
-}
-
-section .button button {
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 18px;
-  font-weight: 400;
-  background: var(--main-blue);
-  color: var(--main-white1);
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-section .button button:hover {
-  border-color: var(--main-blue);
-  background-color: var(--main-white1);
-  color: var(--main-blue);
-}
 
 /* Contact Us section */
 
+.contact{
+  background: url("./images/bgnn.png") no-repeat;
+}
+
 .contact-fluid {
   margin: 20px;
-  width: 75%;
-  background: #2b2a2ae0;
+  width: 80%;
+  background: #1f2a3ee0;
   box-shadow: -1px -1px 4px #4d4b4abb, 1px 1px 3px rgba(75, 74, 74, 0.792);
-  border-radius: 25px;
+  border-radius: 10px;
   font-family: 'Ubuntu', sans-serif;
 
 }
 
 .contact-fluid>a {
-  font-size: 25px;
+  font-size: 30px;
   color: var(--main-white);
-  margin: 15px;
+  margin: 0px 10px;
+  
 }
 
 .contact-fluid>a:hover {
@@ -406,8 +323,8 @@ section .button button:hover {
 }
 
 .contact-fluid .container-c .row1 .col-md-7 {
-  width: 60%;
-  background: #2b2a2ae0;
+  width: 70%;
+  background: #192031e0;
   align-items: center;
   padding: 7px;
   border-radius: 10px;
@@ -446,9 +363,9 @@ section .button button:hover {
 
 .contact-fluid .container-c .row1 .col-md-7 .button {
   color: white;
-  background-color: rgba(62, 56, 56, 0.582);
+  background-color: rgba(21, 29, 43, 0.582);
   border: 1px solid white;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: large;
   padding: 5px;
   font-weight: 600;
@@ -461,53 +378,6 @@ section .button button:hover {
   font-weight: 600;
 }
 
-/* My Skills CSS */
-.skills .content>a {
-  font-size: 25px;
-  color: #322d2d;
-  margin: 15px;
-}
-
-.skills .content>a:hover {
-  color: var(--main-blue);
-}
-
-.skills .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.skills .boxes .box {
-  margin: 20px 0;
-  width: 30%;
-  text-align: center;
-  border-radius: 12px;
-  padding: 30px 10px;
-  /* box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.16); */
-  box-shadow: -1px -1px 3px #43414186, 1px 1px 3px rgba(76, 74, 74, 0.192);
-  cursor: default;
-  transition: all 0.4s ease;
-}
-
-.skills .boxes .box:hover {
-  background: var(--main-blue);
-  color: var(--main-white1);
-}
-
-
-.skills .boxes .box:hover .topic,
-.skills .boxes .box:hover p {
-  color: var(--main-darkblue);
-  transition: all 0.4s ease;
-}
-
-.skills .boxes .box:hover .topic,
-.skills .boxes .box:hover p {
-  color: var(--main-white1);
-}
-
-
 /* Footer CSS */
 footer {
   background: var(--main-blue);
@@ -518,8 +388,8 @@ footer {
 }
 
 footer .text span {
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 12px;
+
   color: var(--main-white1);
 }
 
@@ -566,21 +436,6 @@ footer .text span a:hover {
 
 
 @media (max-width: 1000px) {
-  .about .about-details {
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .about .about-details .left {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .about-details .right {
-    width: 100%;
-    margin: 30px 0;
-  }
   .hero_container .image_section img {
     height: 90%;
     width: 92%;
@@ -591,11 +446,6 @@ footer .text span a:hover {
 @media (max-width: 900px) {
   .about .left img {
     width: 60%;
-  }
-
-  .skills .boxes .box {
-    margin: 20px 0;
-    width: 45%;
   }
 
   .navbar .media-icons a {
@@ -681,11 +531,6 @@ footer .text span a:hover {
   .navbar .menu .cancel-btn {
     display: block;
   }
-
-  .contact-fluid {
-    width: 90%;
-  }
-
   .contact-fluid .container-c .row1 {
     flex-direction: column;
   }
@@ -738,6 +583,9 @@ footer .text span a:hover {
   .home .text-three {
     font-size: 33px;
   }
+  .contact-fluid{
+    width: 100%;
+  }
 
   .contact-fluid .container-c .row1 .col-md-7 {
     width: 100%;
@@ -746,12 +594,6 @@ footer .text span a:hover {
   .contact-fluid .container-c .row1 .col-md-5 .contact_text .contact_items {
     padding: 20px;
   }
-
-  .skills .boxes .box {
-    margin: 20px 0;
-    width: 100%;
-  }
-
   .hero_container .text_section {
     max-width: 100%;
   }
@@ -779,11 +621,4 @@ footer .text span a:hover {
     border-radius: 50%;
 
   }
-  .about .left img{
-    width: 100%;
-  }
-  
-.about-details .right {
-  width: 100%;
-}
 }

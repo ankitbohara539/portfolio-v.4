@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-Page</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/android-chrome-512x512.png">
+    <link rel="stylesheet" href="./assets/css/about.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+     <!-- Move to up button -->
+     <div class="scroll-button">
+        <a href="./about.html"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <nav>
+    <div class="navbar">
+        <div class="logo"><a href="#">Portfolio.</a></div>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./skills.html">Skills</a></li>
+            <li><a href="./project.html">Projects</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <div class="cancel-btn">
+                <i class="fas fa-times"></i>
+            </div>
+        </ul>
+        <div class="media-icons">
+            <a href="https://www.facebook.com/profile.php?id=100070835915775"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/ankit-bohara-2a5833250/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/ankitbohara539"><i class="fa fa-github"></i></a>
+            <a href="https://www.instagram.com/ankiit2027/"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+</nav>
+
+
+    <!-- About Section Start -->
+
+    <section class="about">
+        <div class="content">
+            <div class="title"><span>About Me</span></div>
+            <div class="about-details">
+                <div class="left">
+                    <img src="./assets/css/images/gif.gif" alt="" />
+                </div>
+                <div class="right">
+                    <div class="topic">Web Developing Is My Passion</div>
+
+                    <p>
+                        Hello! I'm a passionate web developer with a robust skill set in HTML, CSS, JavaScript, Git,
+                        GitHub, XAMPP, and WordPress. I create visually appealing, user-friendly, and highly functional
+                        websites, specializing in both front-end and back-end development. My projects range from
+                        responsive
+                        portfolio websites to fully functional e-commerce platforms, demonstrating my ability to deliver
+                        seamless digital experiences. I'm proficient in using Git for version control, XAMPP for local
+                        development,
+                        and WordPress for content management. I'm always excited to take on new challenges and
+                        collaborate on
+                        innovative projects. Let's build something amazing together!
+                    <div class="button">
+                        <a href="./assets/images/cv.pdf"><button>Download CV</button></a>
+                        <span>
+                            <ul class="wrapper">
+                                <li class="icon facebook">
+                                    <a href="https://www.facebook.com/profile.php?id=100070835915775"><i
+                                            class="fa fa-facebook-f"></i></a> <span class="tooltip">Facebook</span>
+                                </li>
+                                <li class="icon twitter">
+                                    <a href="https://www.linkedin.com/in/ankit-bohara-2a5833250/"> <i
+                                            class="fa fa-linkedin"></i></a><span class="tooltip">linkedin</span>
+                                </li>
+                                <li class="icon instagram">
+                                    <a href="https://www.instagram.com/ankiit2027/"><i
+                                            class="fab fa-instagram"></i></a><span class="tooltip">Instagram</span>
+                                </li>
+                            </ul>
+                        </span>
+                        <style>
+                            .wrapper {
+                                display: inline-flex;
+                                list-style: none;
+                                font-family: "Poppins", sans-serif;
+                                justify-content: center;
+                                margin-left: 40%;
+                            }
+
+                            .wrapper .icon {
+                                position: relative;
+                                background: #fff;
+                                border-radius: 20%;
+                                margin: 10px;
+                                width: 35px;
+                                height: 35px;
+                                font-size: 25px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                flex-direction: column;
+                                box-shadow: -1px -1px 3px #66616186, 1px 1px 3px rgba(101, 93, 93, 0.192);
+                                cursor: pointer;
+                                transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                            }
+
+                            .wrapper .icon>a:hover {
+                                color: #fff;
+                            }
+
+                            .wrapper .tooltip {
+                                position: absolute;
+                                top: 0;
+                                font-size: 14px;
+                                background: #fff;
+                                color: #fff;
+                                padding: 5px 8px;
+                                border-radius: 5px;
+                                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                                opacity: 0;
+                                pointer-events: none;
+                                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                            }
+
+                            .wrapper .tooltip::before {
+                                position: absolute;
+                                content: "";
+                                height: 8px;
+                                width: 8px;
+                                background: #fff;
+                                bottom: -3px;
+                                left: 50%;
+                                transform: translate(-50%) rotate(45deg);
+                                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                            }
+
+                            .wrapper .icon:hover .tooltip {
+                                top: -35px;
+                                opacity: 1;
+                                visibility: visible;
+                                pointer-events: auto;
+                            }
+
+                            .wrapper .icon:hover span,
+                            .wrapper .icon:hover .tooltip {
+                                text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+                            }
+
+                            .wrapper .facebook:hover,
+                            .wrapper .facebook:hover .tooltip,
+                            .wrapper .facebook:hover .tooltip::before {
+                                background: #1877f2;
+                                color: #fff;
+                            }
+
+                            .wrapper .twitter:hover,
+                            .wrapper .twitter:hover .tooltip,
+                            .wrapper .twitter:hover .tooltip::before {
+                                background: #1da1f2;
+                                color: #fff;
+                            }
+
+                            .wrapper .instagram:hover,
+                            .wrapper .instagram:hover .tooltip,
+                            .wrapper .instagram:hover .tooltip::before {
+                                background: #e441bb;
+                                color: #fff;
+                            }
+
+                            @media (max-width: 1200px) {
+                                .wrapper {
+                                    margin-left: 25%;
+
+                                }
+
+                            }
+
+                            @media (max-width: 750px) {
+                                .wrapper {
+                                    margin-left: 0;
+                                }
+                            }
+
+                            @media (max-width: 500px) {
+                                .wrapper {
+                                    margin-top: 5%;
+                                }
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section Start -->
+    <footer>
+        <div class="text">
+            <span>Created By <a href="index.html">Ankit Bohara</a> &copy; 2024 All Rights Reserved</span>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
