@@ -584,9 +584,10 @@ footer .text span a:hover {
     font-size: 33px;
   }
   .contact{
-    padding-top: 70px;
+    padding-top: 80px;
   }
   .contact-fluid{
+    margin: 5px;
     width: 100%;
   }
 
