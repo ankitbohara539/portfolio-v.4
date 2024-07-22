@@ -583,6 +583,9 @@ footer .text span a:hover {
   .home .text-three {
     font-size: 33px;
   }
+  .contact{
+    padding-top: 70px;
+  }
   .contact-fluid{
     width: 100%;
   }
