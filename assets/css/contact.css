@@ -1,0 +1,424 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --main-gray: #111212;
+  --main-darkblue: #131741da;
+  --main-white: #f1f1f1;
+  --main-lightblue: #1a3b83;
+  --main-white1: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(173, 140, 145);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-lightblue);
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+
+/* navbar styling */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 13px 0;
+  z-index: 1;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+nav.sticky {
+  background: var(--main-gray);
+  padding: 13px 0;
+  filter: blur(80%);
+  /* box-shadow: -1px -1px 3px #716e6e7e, 1px 1px 3px rgba(255, 255, 255, 0.247); */
+}
+
+nav .navbar {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+nav .navbar .logo a {
+  font-weight: 600;
+  font-size: 35px;
+  color: var(--main-white1);
+}
+
+nav.sticky .navbar .logo a {
+  color: greenyellow;
+}
+
+nav .navbar .menu {
+  display: flex;
+  position: relative;
+
+
+}
+
+nav .navbar .menu li {
+  list-style: none;
+  margin: 0 20px;
+  text-align: center;
+
+}
+
+nav .navbar .menu li a {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-white);
+  transition: all 0.2s ease;
+
+}
+
+nav .menu li a:hover {
+  color: rgb(222, 133, 213);
+  transition: 0.2s;
+
+}
+
+
+
+nav.sticky .menu a {
+  color: var(--main-white1);
+}
+
+nav.sticky .menu a:hover {
+  color: greenyellow;
+  transition: 0.2s;
+}
+
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+  position: absolute;
+  color: var(--main-white1);
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+nav .menu-btn {
+  color: var(--main-white);
+}
+
+nav.sticky .menu-btn {
+  color: var(--main-white1);
+}
+
+.navbar .menu .menu-btn {
+  color: var(--main-white1);
+}
+
+/*Section Styling */
+
+
+/* Those Elements Where i Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+
+
+section {
+  padding-top: 50px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background: rgb(32, 32, 33);
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+section .content {
+  width: 100%;
+  margin: 40px auto;
+
+}
+
+
+/* Contact Us section */
+
+
+.contact-fluid {
+  margin: 20px;
+  width: 80%;
+  background: #2e2c2fe0;
+  box-shadow: -1px -1px 4px #8e8b8abb, 1px 1px 3px rgba(168, 158, 158, 0.792);
+  border-radius: 10px;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+.contact-fluid>a {
+  font-size: 30px;
+  color: var(--main-white);
+  margin: 0px 10px;
+  
+}
+
+.contact-fluid>a:hover {
+  color: var(--main-lightblue);
+}
+
+.contact-fluid .container-c .row1 {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  color: var(--main-white);
+}
+
+.contact-fluid .container-c .row1 .col-md-5>h2 {
+  text-align: center;
+}
+
+.contact-fluid .container-c .row1 .col-md-5 .contact_text .contact_items {
+  display: flex;
+  padding: 35px;
+  align-items: center;
+  color: var(--main-white1)a;
+}
+
+.contact-fluid .container-c .row1 .col-md-5 .contact_text .contact_items>i {
+  font-size: x-large;
+}
+
+.contact-fluid .container-c .row1 .col-md-5 .contact_text .contact_items .contact_details {
+  margin-left: 15px;
+  font-size: small;
+}
+
+.contact-fluid .container-c .row1 .col-md-5 .contact_text .contact_items .contact_details>h3 {
+  font-size: 18px;
+}
+
+.contact-fluid .container-c .row1 .col-md-5 .contact_text .contact_items .contact_details>p {
+  font-size: 12px;
+}
+
+.contact-fluid .container-c .row1 .col-md-7 {
+  width: 70%;
+  background: #192031e0;
+  align-items: center;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.contact-fluid .container-c .row1 .col-md-7 .field {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 100%;
+}
+
+.contact-fluid .container-c .row1 .col-md-7 .field>label {
+  display: block;
+  font-size: 18px;
+  width: 100%;
+  padding: 7px;
+
+}
+
+.contact-fluid .container-c .row1 .col-md-7 .field>input {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+}
+
+.contact-fluid .container-c .row1 .col-md-7 .field>textarea {
+  width: 100%;
+  resize: vertical;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  padding-bottom: 80px;
+}
+
+.contact-fluid .container-c .row1 .col-md-7 .button {
+  color: white;
+  background-color: rgba(21, 29, 43, 0.582);
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: large;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-fluid .container-c .row1 .col-md-7 .button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-weight: 600;
+}
+
+
+
+/* Footer CSS */
+footer {
+  background: var(--main-gray);
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: -1px -1px 3px #18181886, 1px 1px 3px rgba(21, 21, 21, 0.192);
+}
+
+footer .text span {
+  font-size: 15px;
+
+  color: var(--main-white1);
+}
+
+footer .text span a {
+  font-weight: 500;
+  color: var(--main-white1);
+}
+
+footer .text span a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll TO Top Button CSS */
+.scroll-button a {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  color: var(--main-white1);
+  background: var(--main-blue);
+  padding: 7px 12px;
+  border: 1px solid #f1f1f1;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+.scroll-button a:hover {
+  background-color: var(--main-darkblue);
+}
+
+
+
+
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+ 
+ 
+}
+
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 900px) {
+
+}
+
+@media (max-width: 750px) {
+  nav .navbar {
+    width: 90%;
+  }
+
+ 
+  nav .navbar .menu {
+    position: fixed;
+    right:-100%;
+    top: 0;
+    background: var(--main-gray);
+    height: 100vh;
+    width: 50%;
+    padding-top: 60px;
+    flex-direction: column;
+    transition: all 0.4s ease;
+  }
+
+  .navbar.active .menu {
+    right: 0;
+
+  }
+
+
+  nav .navbar .menu a {
+    font-size: 23px;
+    color: var(--main-white1);
+    display: block;
+    padding: 20px 0;
+    margin-left: 20px;
+  }
+
+  nav.sticky .menu a:hover {
+    color: var(--main-blue);
+  }
+
+  nav .navbar .media-icons {
+    display: none;
+  }
+
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+  .contact-fluid .container-c .row1 {
+    flex-direction: column;
+  }
+
+  .contact-fluid>h1 {
+    display: none;
+  }
+
+  .contact-fluid .container-c .row1 .col-md-7 {
+    width: 100%;
+
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .contact{
+    padding-top: 80px;
+  }
+  .contact-fluid{
+    margin: 5px;
+    width: 90%;
+  }
+
+  .contact-fluid .container-c .row1 .col-md-7 {
+    width: 100%;
+  }
+
+  .contact-fluid .container-c .row1 .col-md-5 .contact_text .contact_items {
+    padding: 20px;
+  }
+  footer .text span{
+    font-size: 12px;
+  }
+
+}

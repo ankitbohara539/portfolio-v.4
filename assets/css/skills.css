@@ -2,130 +2,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 :root {
-    --main-blue: #1a294b;
-    --main-darkblue: #131741da;
-    --main-white: #f1f1f1;
-    --main-lightblue: #192aae;
-    --main-white1: #fff;
+  --main-gray: #111212;
+  --main-darkblue: #131741da;
+  --main-white: #f1f1f1;
+  --main-lightblue: #1a3b83;
+  --main-white1: #fff;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--main-white);
+  background: rgb(173, 140, 145);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--main-lightblue);
-    transition: all 0.5s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--main-blue);
+  background: var(--main-lightblue);
+  border-radius: 25px;
+  transition: all 0.5s ease;
 }
 
 /* navbar styling */
 nav {
-    position: fixed;
-    width: 100%;
-    padding: 13px 0;
-    z-index: 998;
-    transition: all 0.3s ease;
-    font-family: 'Ubuntu', sans-serif;
-    box-shadow: -1px -1px 3px #18181886, 1px 1px 3px rgba(21, 21, 21, 0.192);
+  position: fixed;
+  width: 100%;
+  padding: 13px 0;
+  z-index: 1;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+
 }
 
 nav.sticky {
-    background: var(--main-blue);
-    padding: 13px 0;
+  background: var(--main-gray);
+  padding: 13px 0;
+  filter: blur(80%);
+  /* box-shadow: -1px -1px 3px #716e6e7e, 1px 1px 3px rgba(255, 255, 255, 0.247); */
 }
 
 nav .navbar {
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
 }
 
 nav .navbar .logo a {
-    font-weight: 500;
-    font-size: 35px;
-    color: var(--main-blue);
+  font-weight: 600;
+  font-size: 35px;
+  color: var(--main-white1);
 }
 
 nav.sticky .navbar .logo a {
-    color: var(--main-white1);
+  color: greenyellow;
 }
 
 nav .navbar .menu {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
+
+
 }
 
 nav .navbar .menu li {
-    list-style: none;
-    margin: 0 20px;
+  list-style: none;
+  margin: 0 20px;
+  text-align: center;
 
 }
 
-.navbar .menu a {
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--main-darkblue);
-    transition: all 0.3s ease;
+nav .navbar .menu li a {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-white);
+  transition: all 0.2s ease;
 
 }
 
-.navbar .menu a:hover {
-    color: rgb(226, 101, 18);
+nav .menu li a:hover {
+  color: rgb(222, 133, 213);
+  transition: 0.2s;
 
 }
+
+
 
 nav.sticky .menu a {
-    color: var(--main-white1);
+  color: var(--main-white1);
 }
 
 nav.sticky .menu a:hover {
-    color: rgb(226, 101, 18);
+  color: greenyellow;
+  transition: 0.2s;
 }
 
-.navbar .media-icons a {
-    color: var(--main-blue);
-    font-size: 18px;
-    margin: 0 3px;
-    background-color: var(--main-white);
-    padding: 10px 15px;
-    border-radius: 20%;
-    box-shadow: -1px -1px 3px #65616186, 1px 1px 3px rgba(105, 101, 101, 0.192);
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+  position: absolute;
+  color: var(--main-white1);
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
 }
 
-.navbar .media-icons a:hover {
-    color: rgb(226, 101, 18);
+nav .menu-btn {
+  color: var(--main-white);
 }
 
-nav.sticky .media-icons a {
-    color: var(--main-white1);
-    background-color: var(--main-darkblue);
-    box-shadow: -1px -1px 3px #aeaaaa9d, 1px 1px 3px rgba(189, 182, 182, 0.581);
+nav.sticky .menu-btn {
+  color: var(--main-white1);
 }
 
-nav.sticky .media-icons a:hover {
-    color: var(--main-lightblue);
+.navbar .menu .menu-btn {
+  color: var(--main-white1);
 }
 
 
@@ -143,7 +151,7 @@ nav .menu-btn,
 }
 
 nav .menu-btn {
-    color: var(--main-blue);
+    color: var(--main-white);
 }
 
 nav.sticky .menu-btn {
@@ -167,6 +175,7 @@ section {
     min-height: 100vh;
     width: 100%;
     display: flex;
+    background: rgb(32, 32, 33);
     justify-content: center;
     align-items: center;
     background-size: cover;
@@ -211,60 +220,39 @@ section .title span::after {
     left: 50%;
     transform: translateX(-50%);
 }
-
-/* My Skills CSS */
-.skills .content>a {
-    font-size: 25px;
-    color: #322d2d;
-    margin: 15px;
-  }
-  
-  .skills .content>a:hover {
-    color: var(--main-blue);
-  }
-  
-  .skills .boxes {
+.cv{
+    margin-top: 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .skills .boxes .box {
-    margin: 20px 0;
-    width: 30%;
-    text-align: center;
-    border-radius: 12px;
-    padding: 40px 15px;
-    box-shadow: -1px -1px 3px #43414186, 1px 1px 3px rgba(76, 74, 74, 0.192);
-    cursor: default;
-    transition: all 0.3s ease;
-  }
-  .skills .boxes .box .topic{
-    font-size: 20px;
-    font-weight: 700;
-  }
-  
-  .skills .boxes .box:hover {
-    background: var(--main-blue);
-    color: var(--main-white1);
-  }
-  
-  
-  .skills .boxes .box:hover .topic,
-  .skills .boxes .box:hover p {
-    color: var(--main-darkblue);
-    transition: all 0.3s ease;
-  }
-  
-  .skills .boxes .box:hover .topic,
-  .skills .boxes .box:hover p {
-    color: var(--main-white1);
-  }
-  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cv>img{
+    height: 50%;
+    width: 50%;
+    cursor:text;
+}
+.cv>h3{
+    margin-top: 30px;
+    color: var(--main-white);
+    font-weight: 600;
+}
+.cv>a{
+    color: var(--main-white);
+    margin: 10px;
+    border: 1px solid rgb(107, 167, 29);
+    padding: 10px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
 
+.cv>a:hover{
+    color: var(--main-gray);
+    background: var(--main-white1);
+}
 /* Footer CSS */
 footer {
-    background: var(--main-blue);
+    background: var(--main-gray);
     padding: 15px 0;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -272,7 +260,7 @@ footer {
 }
 
 footer .text span {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--main-white1);
 }
 
@@ -288,7 +276,7 @@ footer .text span a:hover {
 /* Scroll TO Top Button CSS */
 .scroll-button a {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     color: var(--main-white1);
     background: var(--main-blue);
@@ -337,9 +325,9 @@ footer .text span a:hover {
         position: fixed;
         right: -100%;
         top: 0;
-        background: var(--main-darkblue);
+        background: var(--main-gray);
         height: 100vh;
-        width: 40%;
+        width: 50%;
         padding-top: 60px;
         flex-direction: column;
         transition: all 0.4s ease;
@@ -375,6 +363,9 @@ footer .text span a:hover {
     section .content{
         width: 80%;
     }
+    .cv>img{
+        width: 80%;
+    }
 
 }
 
@@ -382,6 +373,12 @@ footer .text span a:hover {
     .skills .boxes .box {
         margin: 20px 0;
         width: 100%;
+    }
+    .cv>img{
+        width: 80%;
+    }
+    footer .text span{
+        font-size: 12px;
     }
 
 }
