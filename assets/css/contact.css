@@ -22,15 +22,15 @@ html {
 
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(173, 140, 145);
+  background:var(--main-white);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main-lightblue);
+  background: var(--main-darkblue);
   border-radius: 25px;
   transition: all 0.5s ease;
 }
@@ -93,21 +93,32 @@ nav .navbar .menu li a {
 
 }
 
-nav .menu li a:hover {
-  color: rgb(222, 133, 213);
-  transition: 0.2s;
-
+.navbar .menu li a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.4s ease;
 }
 
+.navbar .menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  left: 0;
+  bottom: 0;
+  background:var(--main-white);
+  transition: width 0.4s ease;
+}
+
+.navbar .menu li a:hover::after {
+  width: 100%;
+}
 
 
 nav.sticky .menu a {
   color: var(--main-white1);
-}
-
-nav.sticky .menu a:hover {
-  color: greenyellow;
-  transition: 0.2s;
 }
 
 
@@ -148,7 +159,7 @@ section {
   min-height: 100vh;
   width: 100%;
   display: flex;
-  background: rgb(32, 32, 33);
+  background: url(./images/bg1.jpg);
   justify-content: center;
   align-items: center;
   background-size: cover;

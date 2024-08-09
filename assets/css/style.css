@@ -22,15 +22,15 @@ html {
 
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(173, 140, 145);
+  background: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main-lightblue);
+  background:var(--main-darkblue);
   border-radius: 25px;
   transition: all 0.5s ease;
 }
@@ -92,24 +92,32 @@ nav .navbar .menu li a {
   transition: all 0.2s ease;
 
 }
-
-nav .menu li a:hover {
-  color: rgb(222, 133, 213);
-  transition: 0.2s;
-
+.navbar .menu li a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.4s ease;
 }
 
+.navbar .menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  left: 0;
+  bottom: 0;
+  background:var(--main-white);
+  transition: width 0.4s ease;
+}
 
+.navbar .menu li a:hover::after {
+  width: 100%;
+}
 
 nav.sticky .menu a {
   color: var(--main-white1);
 }
-
-nav.sticky .menu a:hover {
-  color: yellow;
-  transition: 0.2s;
-}
-
 
 /* Side Navigation Menu Button CSS */
 nav .menu-btn,
@@ -147,6 +155,7 @@ nav.sticky .menu-btn {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  z-index: 100;
 }
 
 .hero_container {
@@ -226,7 +235,8 @@ section {
   justify-content: center;
   align-items: center;
   display: flex;
-  background: url("./images/back.jpg") no-repeat;
+  background: url("./images/bg1.jpg") no-repeat;
+  filter: blur(92%);
   /* background: rgb(32, 32, 33); */
   background-size: cover;
   background-position: center;
@@ -367,19 +377,18 @@ footer .text span a:hover {
 .scroll-button a {
   position: fixed;
   bottom: 60px;
-  right: 20px;
+  right: 10px;
   color: var(--main-white1);
   background: var(--main-blue);
-  padding: 7px 12px;
-  border: 1px solid yellow;
-  font-size: 18px;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15);
+  padding: 15px 8px;
+  font-size: 20px;
+  border-radius: 25px;
   display: none;
+  z-index: 1;
 }
 
 .scroll-button a:hover {
-  background-color: var(--main-darkblue);
+  border: 1px solid white;
 }
 
 
@@ -579,6 +588,10 @@ footer .text span a:hover {
     width: 285px;
 
 
+  }
+  section .content .title{
+    margin-top: 50px;
+    font-size: 15px;
   }
 
   .skills .boxes {

@@ -22,15 +22,15 @@ html {
 
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(173, 140, 145);
+  background:var(--main-white);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main-lightblue);
+  background: var(--main-darkblue);
   border-radius: 25px;
   transition: all 0.5s ease;
 }
@@ -93,21 +93,32 @@ nav .navbar .menu li a {
 
 }
 
-nav .menu li a:hover {
-  color: rgb(222, 133, 213);
-  transition: 0.2s;
-
+.navbar .menu li a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.4s ease;
 }
 
+.navbar .menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  left: 0;
+  bottom: 0;
+  background:var(--main-white);
+  transition: width 0.4s ease;
+}
+
+.navbar .menu li a:hover::after {
+  width: 100%;
+}
 
 
 nav.sticky .menu a {
   color: var(--main-white1);
-}
-
-nav.sticky .menu a:hover {
-  color: yellow;
-  transition: 0.2s;
 }
 
 
@@ -150,7 +161,7 @@ section {
     width: 100%;
     display: flex;
     /* background: rgb(32, 32, 33); */
-    background: url("./images/back.jpg") no-repeat;
+    background: url("./images/bg1.jpg") no-repeat;
     justify-content: center;
     align-items: center;
     background-size: cover;
@@ -210,15 +221,16 @@ section .title span::after {
   .skills .boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   
   .skills .boxes .box {
-    margin: 20px 0;
+    margin: 20px 10px;
     width: 30%;
+    background: var(--main-gray);
     text-align: center;
     border-radius: 12px;
-    padding: 80px 10px;
+    padding: 80px 0;
     box-shadow: -1px -1px 3px #ffffff86, 1px 1px 3px rgba(255, 254, 254, 0.492);
     cursor: default;
     transition: all 0.5s ease;
@@ -273,19 +285,15 @@ footer .text span a:hover {
 .scroll-button a {
     position: fixed;
     bottom: 80px;
-    right: 20px;
+    right: 10px;
     color: var(--main-white1);
-    background: var(--main-gray);
     padding: 7px 12px;
-    border: 1px solid #f1f1f1;
     font-size: 18px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.15);
     display: none;
 }
 
 .scroll-button a:hover {
-    background-color: var(--main-darkblue);
+    border: 1px solid white;
 }
 
 
