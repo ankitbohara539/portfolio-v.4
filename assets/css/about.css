@@ -68,7 +68,7 @@ nav .navbar .logo a {
 }
 
 nav.sticky .navbar .logo a {
-  color: greenyellow;
+  color: yellow;
 }
 
 nav .navbar .menu {
@@ -106,7 +106,7 @@ nav.sticky .menu a {
 }
 
 nav.sticky .menu a:hover {
-  color: greenyellow;
+  color: yellow;
   transition: 0.2s;
 }
 
@@ -264,7 +264,7 @@ section .button button {
 }
 
 section .button button:hover {
-  background-color: rgb(74, 104, 29);
+  background-color: rgb(125, 100, 16);
   color: var(--main-white1);
 
 }
@@ -349,7 +349,7 @@ footer .text span a:hover {
   right: 20px;
   color: var(--main-white1);
   padding: 7px 12px;
-  border: 1px solid #5bae02;
+  border: 1px solid #ae9102;
   font-size: 18px;
   border-radius: 5px;
   display: none;
@@ -467,6 +467,10 @@ footer .text span a:hover {
 }
 
 @media (max-width: 500px) {
+
+  section .content{
+    width: 86%;
+  }
 
   .about .left img {
     width: 100%;

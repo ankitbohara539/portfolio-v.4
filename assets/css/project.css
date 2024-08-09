@@ -68,7 +68,7 @@ nav .navbar .logo a {
 }
 
 nav.sticky .navbar .logo a {
-  color: greenyellow;
+  color: yellow;
 }
 
 nav .navbar .menu {
@@ -106,7 +106,7 @@ nav.sticky .menu a {
 }
 
 nav.sticky .menu a:hover {
-  color: greenyellow;
+  color: yellow;
   transition: 0.2s;
 }
 
@@ -149,7 +149,8 @@ section {
     min-height: 100vh;
     width: 100%;
     display: flex;
-    background: rgb(32, 32, 33);
+    /* background: rgb(32, 32, 33); */
+    background: url("./images/back.jpg") no-repeat;
     justify-content: center;
     align-items: center;
     background-size: cover;

@@ -68,7 +68,7 @@ nav .navbar .logo a {
 }
 
 nav.sticky .navbar .logo a {
-  color: greenyellow;
+  color: yellow;
 }
 
 nav .navbar .menu {
@@ -106,7 +106,7 @@ nav.sticky .menu a {
 }
 
 nav.sticky .menu a:hover {
-  color: greenyellow;
+  color: yellow;
   transition: 0.2s;
 }
 
@@ -198,7 +198,7 @@ nav.sticky .menu-btn {
 
 
 .hero_container .hero_section_button .button:last-child:hover {
-  background: rgb(86, 129, 22);
+  background: rgb(171, 129, 25);
   color: var(--main-white);
   border: none;
 }
@@ -226,8 +226,8 @@ section {
   justify-content: center;
   align-items: center;
   display: flex;
-  /* background: url("./images/back.jpg") no-repeat; */
-  background: rgb(32, 32, 33);
+  background: url("./images/back.jpg") no-repeat;
+  /* background: rgb(32, 32, 33); */
   background-size: cover;
   background-position: center;
   font-family: 'Ubuntu', sans-serif;
@@ -285,8 +285,8 @@ section .title span::after {
   border-radius: 15px;
   padding: 60px 10px;
   color: var(--main-white);
-  background: rgba(116, 117, 116, 0.362);
-  border: 1px solid greenyellow;
+  background: rgb(26, 26, 26);
+  border: 1px solid yellow;
   cursor: default;
   transition: all 0.5s ease;
 }
@@ -325,8 +325,8 @@ section .title span::after {
 
 .media-icons a {
   color: var(--main-gray);
-  font-size: 25px;
-  margin: 0 10px;
+  font-size: 22px;
+  margin: 0 5px;
   background-color: var(--main-white1);
   padding: 10px 14px;
   border-radius: 20%;
@@ -371,7 +371,7 @@ footer .text span a:hover {
   color: var(--main-white1);
   background: var(--main-blue);
   padding: 7px 12px;
-  border: 1px solid greenyellow;
+  border: 1px solid yellow;
   font-size: 18px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15);
