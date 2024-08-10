@@ -47,7 +47,8 @@ nav {
 }
 
 nav.sticky {
-  background: var(--main-gray);
+  background: rgba(46, 44, 44, 0.584);
+  backdrop-filter: blur(100px);
   padding: 13px 0;
   filter: blur(80%);
   /* box-shadow: -1px -1px 3px #716e6e7e, 1px 1px 3px rgba(255, 255, 255, 0.247); */
@@ -103,20 +104,17 @@ nav .navbar .menu li a {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 4px;
   display: block;
-  left: 0;
-  bottom: 0;
-  background:var(--main-white);
+  left: 5px;
+  bottom: 1px;
+  border-radius: 25px;
+  background:yellow;
   transition: width 0.4s ease;
 }
 
 .navbar .menu li a:hover::after {
   width: 100%;
-}
-
-nav.sticky .menu a {
-  color: var(--main-white1);
 }
 
 

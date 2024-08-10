@@ -9,7 +9,7 @@
 }
 
 :root {
-  --main-gray: #111212;
+  --main-gray: #292727;
   --main-darkblue: #131741da;
   --main-white: #f1f1f1;
   --main-lightblue: #1a3b83;
@@ -47,7 +47,8 @@ nav {
 }
 
 nav.sticky {
-  background: var(--main-gray);
+  background: rgba(112, 90, 138, 0.127);
+  backdrop-filter: blur(10px);
   padding: 13px 0;
   filter: blur(80%);
   /* box-shadow: -1px -1px 3px #716e6e7e, 1px 1px 3px rgba(255, 255, 255, 0.247); */
@@ -81,7 +82,6 @@ nav .navbar .menu {
 nav .navbar .menu li {
   list-style: none;
   margin: 0 20px;
-  text-align: center;
 
 }
 
@@ -93,9 +93,10 @@ nav .navbar .menu li a {
 
 }
 .navbar .menu li a {
+  text-align: center;
   position: relative;
   display: inline-block;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
   transition: color 0.4s ease;
 }
 
@@ -103,11 +104,12 @@ nav .navbar .menu li a {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 4px;
+  border-radius: 40px;
   display: block;
-  left: 0;
-  bottom: 0;
-  background:var(--main-white);
+  left: 5px;
+  bottom: 1px;
+  background:yellow;
   transition: width 0.4s ease;
 }
 
@@ -115,9 +117,7 @@ nav .navbar .menu li a {
   width: 100%;
 }
 
-nav.sticky .menu a {
-  color: var(--main-white1);
-}
+
 
 /* Side Navigation Menu Button CSS */
 nav .menu-btn,
@@ -236,8 +236,6 @@ section {
   align-items: center;
   display: flex;
   background: url("./images/bg1.jpg") no-repeat;
-  filter: blur(92%);
-  /* background: rgb(32, 32, 33); */
   background-size: cover;
   background-position: center;
   font-family: 'Ubuntu', sans-serif;
@@ -456,7 +454,7 @@ footer .text span a:hover {
 
 @media (max-width: 750px) {
   nav .navbar {
-    width: 90%;
+    width: 100%;
   }
 
   .home .text-two {
@@ -497,9 +495,6 @@ footer .text span a:hover {
     color: var(--main-blue);
   }
 
-  nav .navbar .media-icons {
-    display: none;
-  }
 
   nav .menu-btn,
   .navbar .menu .cancel-btn {
@@ -550,6 +545,9 @@ footer .text span a:hover {
 }
 
 @media (max-width: 500px) {
+  .hero_section{
+    padding-top: 0px;
+  }
   .hero_container {
     gap: 20px;
   }

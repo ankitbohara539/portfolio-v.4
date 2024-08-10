@@ -67,9 +67,6 @@ nav .navbar .logo a {
   color: var(--main-white1);
 }
 
-nav.sticky .navbar .logo a {
-  color: greenyellow;
-}
 
 nav .navbar .menu {
   display: flex;
@@ -104,21 +101,17 @@ nav .navbar .menu li a {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 4px;
   display: block;
-  left: 0;
-  bottom: 0;
+  left: 5px;
+  bottom: 1px;
+  border-radius: 25px;
   background:var(--main-white);
   transition: width 0.4s ease;
 }
 
 .navbar .menu li a:hover::after {
   width: 100%;
-}
-
-
-nav.sticky .menu a {
-  color: var(--main-white1);
 }
 
 
