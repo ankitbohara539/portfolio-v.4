@@ -30,10 +30,11 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background:var(--main-darkblue);
+  background: var(--main-darkblue);
   border-radius: 25px;
   transition: all 0.5s ease;
 }
+
 
 /* navbar styling */
 nav {
@@ -92,6 +93,7 @@ nav .navbar .menu li a {
   transition: all 0.2s ease;
 
 }
+
 .navbar .menu li a {
   text-align: center;
   position: relative;
@@ -109,7 +111,7 @@ nav .navbar .menu li a {
   display: block;
   left: 5px;
   bottom: 1px;
-  background:yellow;
+  background: yellow;
   transition: width 0.4s ease;
 }
 
@@ -290,13 +292,13 @@ section .title span::after {
   margin: 20px 0;
   width: 30%;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 60px 10px;
   color: var(--main-white);
   background: rgb(26, 26, 26);
-  border: 1px solid yellow;
+  border: 1px solid white;
   cursor: default;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .skills .boxes .box:hover {
@@ -545,9 +547,10 @@ footer .text span a:hover {
 }
 
 @media (max-width: 500px) {
-  .hero_section{
+  .hero_section {
     padding-top: 0px;
   }
+
   .hero_container {
     gap: 20px;
   }
@@ -587,7 +590,8 @@ footer .text span a:hover {
 
 
   }
-  section .content .title{
+
+  section .content .title {
     margin-top: 50px;
     font-size: 15px;
   }
@@ -601,7 +605,8 @@ footer .text span a:hover {
   .skills .boxes .box {
     width: 90%;
   }
-  .media-icons{
+
+  .media-icons {
     top: 20px;
   }
 

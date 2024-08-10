@@ -118,11 +118,6 @@ nav .navbar .menu li a {
 }
 
 
-nav.sticky .menu a {
-  color: var(--main-white1);
-}
-
-
 /* Side Navigation Menu Button CSS */
 nav .menu-btn,
 .navbar .menu .cancel-btn {
