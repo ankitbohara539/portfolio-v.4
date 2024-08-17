@@ -48,7 +48,7 @@ nav {
 }
 
 nav.sticky {
-  background: rgba(112, 90, 138, 0.127);
+  background: rgba(21, 19, 19, 0.551);
   backdrop-filter: blur(10px);
   padding: 13px 0;
   filter: blur(80%);
@@ -69,9 +69,6 @@ nav .navbar .logo a {
   color: var(--main-white1);
 }
 
-nav.sticky .navbar .logo a {
-  color: orange;
-}
 
 nav .navbar .menu {
   display: flex;
@@ -157,32 +154,32 @@ nav.sticky .menu-btn {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  z-index: 100;
+
 }
 
 .hero_container {
   display: flex;
-  gap: 100px;
   align-items: center;
+  gap: 100px;
   padding-top: 40px;
   justify-content: space-between;
 }
 
 .hero_container .text_section h2 {
-  font-size: 60px;
+  font-size: 45px;
   font-weight: 600;
   color: var(--main-white);
 }
 
 .hero_container .text_section h3 {
-  font-size: 35px;
+  font-size: 33px;
   font-weight: 600;
   color: var(--main-white);
   margin-top: 8px;
 }
 
 .hero_container .text_section p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--main-white1);
   margin: 24px 0 40px;
@@ -195,14 +192,14 @@ nav.sticky .menu-btn {
 }
 
 .hero_container .hero_section_button>a .button {
-  padding: 10px 18px;
+  padding: 8px 10px;
   border: 2px solid transparent;
   cursor: pointer;
   border-radius: 5px;
   color: var(--main-white);
   border-color: var(--main-white1);
   background: none;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   transition: all 0.4s ease;
 }
@@ -215,7 +212,7 @@ nav.sticky .menu-btn {
 }
 
 .hero_container .image_section {
-  max-width: 35%;
+  max-width: 40%;
 }
 
 .image_section img {
@@ -491,6 +488,7 @@ footer .text span a:hover {
     display: block;
     padding: 20px 0;
     margin-left: 20px;
+    text-align: left;
   }
 
   nav.sticky .menu a:hover {
