@@ -221,17 +221,18 @@ section .title span::after {
   }
   
   .skills .boxes .box {
-    margin: 20px 10px;
-    width: 30%;
+    margin: 15px 5px;
+    max-width: 400px;
     background: var(--main-gray);
     text-align: center;
     border-radius: 12px;
-    padding: 80px 0;
+    padding: 40px 0;
     box-shadow: -1px -1px 3px #ffffff86, 1px 1px 3px rgba(255, 254, 254, 0.492);
     cursor: default;
     transition: all 0.5s ease;
   }
   .skills .boxes .box .topic{
+    padding: 10px;
     font-size: 20px;
     font-weight: 700;
     color: var(--main-white);
