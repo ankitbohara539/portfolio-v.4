@@ -9,7 +9,7 @@
 }
 
 :root {
-  --main-gray: #111212;
+  --main-gray: #111212dc;
   --main-darkblue: #131741da;
   --main-white: #f1f1f1;
   --main-lightblue: #1a3b83;
@@ -324,48 +324,55 @@ footer .text span a:hover {
 }
 
 @media (max-width: 750px) {
-    nav .navbar {
-        width: 90%;
-    }
+  nav .navbar {
+    width: 100%;
+  }
 
-    nav .navbar .menu {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        background: var(--main-gray);
-        height: 100vh;
-        width: 50%;
-        padding-top: 60px;
-        flex-direction: column;
-        transition: all 0.4s ease;
-    }
+  .home .text-two {
+    font-size: 65px;
+  }
 
-    .navbar.active .menu {
-        right: 0;
+  .home .text-three {
+    font-size: 35px;
+  }
 
-    }
+  nav .navbar .menu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    background: var(--main-gray);
+    height: 100vh;
+    width: 50%;
+    padding-top: 60px;
+    flex-direction: column;
+    transition: all 0.4s ease;
+  }
+
+  .navbar.active .menu {
+    right: 0;
+
+  }
 
 
-    nav .navbar .menu a {
-        font-size: 23px;
-        color: var(--main-white1);
-        display: block;
-        padding: 20px 0;
-        margin-left: 20px;
-    }
+  nav .navbar .menu a {
+    font-size: 23px;
+    color: var(--main-white1);
+    display: block;
+    padding: 20px 0;
+    margin-left: 20px;
+    text-align: left;
+  }
 
-    nav.sticky .menu a:hover {
-        color: var(--main-blue);
-    }
+  nav.sticky .menu a:hover {
+    color: var(--main-blue);
+  }
 
-    nav .navbar .media-icons {
-        display: none;
-    }
 
-    nav .menu-btn,
-    .navbar .menu .cancel-btn {
-        display: block;
-    }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+
 
     section .content{
         width: 80%;

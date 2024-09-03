@@ -9,7 +9,7 @@
 }
 
 :root {
-  --main-gray: #111212;
+  --main-gray: #111212dc;
   --main-darkblue: #131741da;
   --main-white: #f1f1f1;
   --main-lightblue: #1a3b83;
@@ -336,13 +336,20 @@ footer .text span a:hover {
 
 @media (max-width: 750px) {
   nav .navbar {
-    width: 90%;
+    width: 100%;
   }
 
- 
+  .home .text-two {
+    font-size: 65px;
+  }
+
+  .home .text-three {
+    font-size: 35px;
+  }
+
   nav .navbar .menu {
     position: fixed;
-    right:-100%;
+    right: -100%;
     top: 0;
     background: var(--main-gray);
     height: 100vh;
@@ -364,20 +371,19 @@ footer .text span a:hover {
     display: block;
     padding: 20px 0;
     margin-left: 20px;
+    text-align: left;
   }
 
   nav.sticky .menu a:hover {
     color: var(--main-blue);
   }
 
-  nav .navbar .media-icons {
-    display: none;
-  }
 
   nav .menu-btn,
   .navbar .menu .cancel-btn {
     display: block;
   }
+
   .contact-fluid .container-c .row1 {
     flex-direction: column;
   }

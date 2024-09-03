@@ -9,7 +9,7 @@
 }
 
 :root {
-  --main-gray: #292727;
+  --main-gray: #111212dc;
   --main-darkblue: #131741da;
   --main-white: #f1f1f1;
   --main-lightblue: #1a3b83;
@@ -19,6 +19,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
@@ -44,6 +45,7 @@ nav {
   z-index: 1;
   transition: all 0.3s ease;
   font-family: 'Ubuntu', sans-serif;
+ 
 
 }
 
@@ -145,6 +147,7 @@ nav.sticky .menu-btn {
 
 
 /* Hero Section */
+/* Existing CSS */
 .hero_section {
   padding-top: 50px;
   height: 100%;
@@ -154,7 +157,34 @@ nav.sticky .menu-btn {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
 
+/* Animation for hero_section */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero_section {
+  animation: fadeInUp 1s ease forwards; /* Apply animation */
+}
+
+/* Animation for hero_container */
+@keyframes fadeInUpContainer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero_container {
@@ -163,6 +193,39 @@ nav.sticky .menu-btn {
   gap: 100px;
   padding-top: 40px;
   justify-content: space-between;
+  animation: fadeInUpContainer 1s 0.5s ease forwards; /* Apply animation with delay */
+}
+
+/* Animation for image_section */
+@keyframes fadeInUpImage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image_section {
+  overflow: hidden; /* Ensure content stays within the bounds */
+  position: relative; /* Positioning for before pseudo-element */
+  transition: transform 0.5s ease-out;
+  animation: fadeInUpImage 1s 1s ease forwards; /* Apply animation with delay */
+}
+
+/* Existing CSS for .text_section and hover effects */
+.hero_container .text_section {
+  box-shadow: 0 2px 3px 0 rgba(43, 42, 42, 0.2), 0 3px 10px 0 rgba(112, 106, 106, 0.19);
+  padding: 40px;
+  border-radius: 15px;
+  transition: transform 0.8s; 
+  transform-style: preserve-3d;
+}
+
+.text_section:hover {
+  transform: rotatez(360deg); 
 }
 
 .hero_container .text_section h2 {
@@ -191,33 +254,64 @@ nav.sticky .menu-btn {
   gap: 24px;
 }
 
-.hero_container .hero_section_button>a .button {
-  padding: 8px 10px;
+.hero_container .hero_section_button > a .button {
+  padding: 8px 13px;
   border: 2px solid transparent;
   cursor: pointer;
   border-radius: 5px;
   color: var(--main-white);
   border-color: var(--main-white1);
   background: none;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   transition: all 0.4s ease;
 }
 
-
 .hero_container .hero_section_button .button:last-child:hover {
-  background: rgb(239, 102, 4);
+  background: rgb(53, 78, 87);
   color: var(--main-white);
-  border: none;
 }
 
-.hero_container .image_section {
-  max-width: 40%;
+/* Existing CSS for .image_section */
+.image_section {
+  overflow: hidden; /* Ensure content stays within the bounds */
+  position: relative; /* Positioning for before pseudo-element */
+  transition: transform 0.5s ease-out;
+}
+
+.image_section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Optional dark overlay for effect */
+  clip-path: polygon(0 0, 0 0, 100% 0, 100% 0); /* Initially hidden */
+  transition: clip-path 0.5s ease-out; /* Smooth transition for the reveal */
+  z-index: 1;
+}
+
+.image_section:hover::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Expands from all corners */
 }
 
 .image_section img {
-  height: 450px;
-  width: 450px;
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease-out;
+}
+
+.image_section:hover img {
+  transform: scale(1.1); /* Slight zoom effect on image hover */
+}
+
+.image_section img {
+  height: 345px;
+  width: 325px;
+  filter: saturate(1.8);
+  padding: 10px;
+  z-index: 3;
 }
 
 
@@ -504,7 +598,7 @@ footer .text span a:hover {
 
 
   .hero_container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     padding-bottom: 32px;
   }
@@ -516,9 +610,7 @@ footer .text span a:hover {
 
   .hero_container .image_section img {
     height: 270px;
-    width: 285px;
-    border-radius: 50%;
-
+    width: 275px;
   }
 
   .hero_container .text_section {
@@ -550,7 +642,9 @@ footer .text span a:hover {
   }
 
   .hero_container {
+    margin-top: 50px;
     gap: 20px;
+ 
   }
 
   .home .text-two {
@@ -563,6 +657,7 @@ footer .text span a:hover {
 
   .hero_container .text_section {
     max-width: 100%;
+    margin: 20px;
   }
 
   .hero_container .text_section h2 {
@@ -584,9 +679,7 @@ footer .text span a:hover {
 
   .hero_container .image_section img {
     height: 250px;
-    width: 285px;
-
-
+    width: 235px;
   }
 
   section .content .title {
