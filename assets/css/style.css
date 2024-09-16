@@ -225,7 +225,7 @@ nav.sticky .menu-btn {
 }
 
 .text_section:hover {
-  transform: rotatez(360deg); 
+  transform: rotatez(30deg); 
 }
 
 .hero_container .text_section h2 {
