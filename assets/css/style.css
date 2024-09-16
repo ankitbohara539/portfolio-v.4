@@ -221,11 +221,6 @@ nav.sticky .menu-btn {
   padding: 40px;
   border-radius: 15px;
   transition: transform 0.8s; 
-  transform-style: preserve-3d;
-}
-
-.text_section:hover {
-  transform: skewY(20deg); 
 }
 
 .hero_container .text_section h2 {
@@ -308,7 +303,7 @@ nav.sticky .menu-btn {
 
 .image_section img {
   height: 455px;
-  width: 490px;
+  width: 520px;
   filter: saturate(1.8);
   padding: 10px;
   z-index: 3;
