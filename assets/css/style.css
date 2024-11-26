@@ -183,7 +183,6 @@ nav.sticky .menu-btn {
   padding: 40px;
   border-radius: 15px;
   transition: transform 0.8s; 
-<<<<<<< HEAD
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -191,8 +190,6 @@ nav.sticky .menu-btn {
   font-size: 25px;
   font-weight: 600;
   color: var(--main-white);
-=======
->>>>>>> 85d358b64ba996e38a44ec478931ad7515caa218
 }
 .hero_container .text_section .p2 {
   font-size: 25px;
@@ -262,11 +259,7 @@ nav.sticky .menu-btn {
 
 .image_section img {
   height: 455px;
-<<<<<<< HEAD
   width: 450px;
-=======
-  width: 520px;
->>>>>>> 85d358b64ba996e38a44ec478931ad7515caa218
   filter: saturate(1.8);
   padding: 10px;
   z-index: 3;
@@ -627,11 +620,7 @@ footer .text span a:hover {
   }
 
   .hero_container .text_section p {
-<<<<<<< HEAD
     font-size: 10px;
-=======
-    font-size: 13px;
->>>>>>> 85d358b64ba996e38a44ec478931ad7515caa218
   }
 
   .hero_container .text_section .hero_section_button .button {
@@ -640,13 +629,8 @@ footer .text span a:hover {
   }
 
   .hero_container .image_section img {
-<<<<<<< HEAD
     width: 100%;
     border-radius: none;
-=======
-    height: 250px;
-    width: 275px;
->>>>>>> 85d358b64ba996e38a44ec478931ad7515caa218
   }
 
   section .content .title {
