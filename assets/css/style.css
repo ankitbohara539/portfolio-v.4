@@ -159,33 +159,7 @@ nav.sticky .menu-btn {
   background-attachment: fixed;
 }
 
-/* Animation for hero_section */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.hero_section {
-  animation: fadeInUp 1s ease forwards; /* Apply animation */
-}
-
-/* Animation for hero_container */
-@keyframes fadeInUpContainer {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .hero_container {
   display: flex;
@@ -194,18 +168,6 @@ nav.sticky .menu-btn {
   padding-top: 40px;
   justify-content: space-between;
   animation: fadeInUpContainer 1s 0.5s ease forwards; /* Apply animation with delay */
-}
-
-/* Animation for image_section */
-@keyframes fadeInUpImage {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .image_section {
@@ -217,19 +179,20 @@ nav.sticky .menu-btn {
 
 /* Existing CSS for .text_section and hover effects */
 .hero_container .text_section {
-  box-shadow: 0 2px 3px 0 rgba(43, 42, 42, 0.2), 0 3px 10px 0 rgba(112, 106, 106, 0.19);
+  box-shadow: 0 3px 4px 4px rgba(185, 184, 184, 0.2), 0 3px 4px 4px rgba(99, 97, 97, 0.19);
   padding: 40px;
   border-radius: 15px;
   transition: transform 0.8s; 
-  transform-style: preserve-3d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.text_section:hover {
-  transform: rotatez(360deg); 
+.hero_container .text_section .p1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--main-white);
 }
-
-.hero_container .text_section h2 {
-  font-size: 45px;
+.hero_container .text_section .p2 {
+  font-size: 25px;
   font-weight: 600;
   color: var(--main-white);
 }
@@ -245,7 +208,7 @@ nav.sticky .menu-btn {
   font-size: 18px;
   font-weight: 400;
   color: var(--main-white1);
-  margin: 24px 0 40px;
+  margin: 15px 0 30px;
   max-width: 100%;
 }
 
@@ -255,20 +218,20 @@ nav.sticky .menu-btn {
 }
 
 .hero_container .hero_section_button > a .button {
-  padding: 8px 13px;
+  padding: 8px 10px;
   border: 2px solid transparent;
   cursor: pointer;
   border-radius: 5px;
   color: var(--main-white);
   border-color: var(--main-white1);
   background: none;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   transition: all 0.4s ease;
 }
 
 .hero_container .hero_section_button .button:last-child:hover {
-  background: rgb(53, 78, 87);
+  background: rgb(40, 122, 211);
   color: var(--main-white);
 }
 
@@ -276,21 +239,9 @@ nav.sticky .menu-btn {
 .image_section {
   overflow: hidden; /* Ensure content stays within the bounds */
   position: relative; /* Positioning for before pseudo-element */
-  transition: transform 0.5s ease-out;
+  transition: transform 0.1s ease-out;
 }
 
-.image_section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Optional dark overlay for effect */
-  clip-path: polygon(0 0, 0 0, 100% 0, 100% 0); /* Initially hidden */
-  transition: clip-path 0.5s ease-out; /* Smooth transition for the reveal */
-  z-index: 1;
-}
 
 .image_section:hover::before {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Expands from all corners */
@@ -303,15 +254,16 @@ nav.sticky .menu-btn {
 }
 
 .image_section:hover img {
-  transform: scale(1.1); /* Slight zoom effect on image hover */
+  transform: scale(1.4); /* Slight zoom effect on image hover */
 }
 
 .image_section img {
-  height: 345px;
-  width: 325px;
+  height: 455px;
+  width: 450px;
   filter: saturate(1.8);
   padding: 10px;
   z-index: 3;
+  border-radius: 50%;
 }
 
 
@@ -609,8 +561,8 @@ footer .text span a:hover {
   }
 
   .hero_container .image_section img {
-    height: 270px;
-    width: 275px;
+   
+    width: 100%;
   }
 
   .hero_container .text_section {
@@ -656,20 +608,19 @@ footer .text span a:hover {
   }
 
   .hero_container .text_section {
-    max-width: 100%;
-    margin: 20px;
+    max-width: 90%;
   }
 
-  .hero_container .text_section h2 {
-    font-size: 30px;
+  .hero_container .text_section .p2 {
+    font-size: 15px;
   }
 
-  .hero_container .text_section h3 {
-    font-size: 20px;
+  .hero_container .text_section .p1 {
+    font-size: 18px;
   }
 
   .hero_container .text_section p {
-    font-size: 15px;
+    font-size: 10px;
   }
 
   .hero_container .text_section .hero_section_button .button {
@@ -678,8 +629,8 @@ footer .text span a:hover {
   }
 
   .hero_container .image_section img {
-    height: 250px;
-    width: 235px;
+    width: 100%;
+    border-radius: none;
   }
 
   section .content .title {

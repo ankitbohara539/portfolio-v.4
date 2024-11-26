@@ -232,8 +232,9 @@ section .title span::after {
 }
 
 .about .left img {
-  width: 75%;
-  border-radius: 10%;
+  width: 90%;
+  height: 100%;
+  border-radius: 5%;
 }
 
 .about-details .right {
@@ -271,7 +272,7 @@ section .button button {
 }
 
 section .button button:hover {
-  background-color: rgb(125, 100, 16);
+  background-color: rgb(34, 146, 238);
   color: var(--main-white1);
 
 }
