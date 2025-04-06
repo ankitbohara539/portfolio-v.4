@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Bohara</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-focus-auto'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M4 8v-2a2 2 0 0 1 2 -2h2' /%3E%3Cpath d='M4 16v2a2 2 0 0 0 2 2h2' /%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v2' /%3E%3Cpath d='M16 20h2a2 2 0 0 0 2 -2v-2' /%3E%3Cpath d='M10 15v-4a2 2 0 1 1 4 0v4' /%3E%3Cpath d='M10 13h4' /%3E%3C/svg%3E">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        .bgimg {
+            background-image: url('portfolio.png');
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            filter: blur(5px);
+            z-index: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+            z-index: 2;
+        }
+
+        .topleft {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        .bottomleft {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 18px;
+            z-index: 3;
+        }
+
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 3;
+        }
+
+        .middle h1 {
+            font-size: 4rem; 
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .typewriter-no-cursor {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 2.5s steps(20, end) 2.5s; /* Delay matches first line duration */
+            border-right: none; /* No cursor */
+        }
+
+        hr {
+            width: 50%;
+            margin: 20px auto;
+            border: 1px solid #fff;
+            opacity: 0.7;
+        }
+
+        .countdown {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 30px;
+            border-radius: 25px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Typewriter animation keyframes */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #fff; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .middle h1 {
+                font-size: 2.5rem;
+            }
+            .countdown {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+            }
+            .topleft, .bottomleft {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .middle h1 {
+                font-size: 1.8rem;
+            }
+            .countdown {
+            
+            font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bgimg"></div>
+    <div class="overlay"></div>
+    <div class="topleft">
+        <img src="logo.jpg" alt="Logo" style="width: 100px; height: auto; border-radius:50px  0 50px 50px;">
+    </div>
+    <div class="middle">
+        <h1 class="typewriter-no-cursor">Coming Soon</h1>
+        <h1 class="typewriter-no-cursor">On the last day of 2081</h1>
+        <hr>
+        <div class="countdown" id="countdown"></div>
+    </div>
+    <div class="bottomleft">
+        <p>Stay Tuned!</p>
+    </div>
+
+    <script>
+        // Countdown Timer for April 13, 2025
+        const launchDate = new Date("April 13, 2025 23:59:59");
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeLeft = launchDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (timeLeft < 0) {
+                document.getElementById('countdown').innerHTML = "We're Live!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert("Right-click is disabled!");
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+                (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+                alert("Developer tools are disabled!");
+            }
+        });
+    </script>
+</body>
+</html>
