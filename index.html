@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Bohara</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-focus-auto'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M4 8v-2a2 2 0 0 1 2 -2h2' /%3E%3Cpath d='M4 16v2a2 2 0 0 0 2 2h2' /%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v2' /%3E%3Cpath d='M16 20h2a2 2 0 0 0 2 -2v-2' /%3E%3Cpath d='M10 15v-4a2 2 0 1 1 4 0v4' /%3E%3Cpath d='M10 13h4' /%3E%3C/svg%3E">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: cursive;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bgimg {
+            background-image: url('portfolio.png');
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            filter: blur(5px);
+            z-index: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        /* Memphis-style emoji background */
+        .emoji-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3; /* Above overlay but below content */
+            pointer-events: none; /* Prevents interaction with emojis */
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: clamp(20px, 3vw, 30px); /* Responsive size */
+            opacity: 0.3; /* Subtle appearance */
+            animation: float 5s infinite ease-in-out;
+        }
+
+        /* Random positioning for emojis */
+        .emoji:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+        .emoji:nth-child(2) { top: 25%; left: 70%; animation-delay: 1s; }
+        .emoji:nth-child(3) { top: 40%; left: 30%; animation-delay: 2s; }
+        .emoji:nth-child(4) { top: 60%; left: 85%; animation-delay: 0.5s; }
+        .emoji:nth-child(5) { top: 80%; left: 20%; animation-delay: 1.5s; }
+        .emoji:nth-child(6) { top: 15%; left: 50%; animation-delay: 3s; }
+
+        /* Float animation for Memphis vibe */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .topleft {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: clamp(16px, 2vw, 24px);
+            font-weight: bold;
+            z-index: 4; /* Above emoji layer */
+        }
+
+        .topleft img {
+            width: clamp(50px, 10vw, 100px);
+            height: auto;
+            border-radius: 50px 0 50px 50px;
+        }
+
+        .bottomleft {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            z-index: 4;
+        }
+
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 4;
+            width: 90%;
+            padding: 0 10px;
+        }
+
+        .middle h1 {
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+   
+
+        hr {
+            width: clamp(50%, 60vw, 50%);
+            margin: 20px auto;
+            border: 1px solid #fff;
+            opacity: 0.7;
+        }
+
+        .countdown {
+            font-size: 50px;
+            font-weight: 800;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: clamp(10px, 2vw, 15px) clamp(20px, 3vw, 30px);
+            border-radius: 25px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+    
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .middle h1 { font-size: clamp(2rem, 5vw, 3rem); }
+            .countdown { font-size: clamp(1rem, 2.5vw, 1.3rem); }
+            .topleft img { width: clamp(40px, 8vw, 80px); }
+        }
+
+        @media (max-width: 768px) {
+            .middle { width: 95%; }
+            .middle h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+            .countdown { font-size: clamp(0.9rem, 2vw, 1.2rem); padding: 10px 20px; }
+            .topleft, .bottomleft { font-size: clamp(12px, 1.5vw, 16px); }
+            .topleft img { width: clamp(30px, 6vw, 60px); }
+            hr { width: 70%; }
+        }
+
+        @media (max-width: 480px) {
+            .middle h1 { font-size: 20px; font-weight: 700; }
+            .countdown { font-size: 20px; padding: 8px 15px; font-weight: 800; }
+            .topleft, .bottomleft { font-size: clamp(10px, 1.2vw, 14px); left: 15px; }
+            .topleft img { width: clamp(25px, 5vw, 50px); }
+            hr { width: 80%; }
+            .emoji { font-size: clamp(15px, 2vw, 20px); }
+        }
+
+        @media (max-height: 500px) {
+            .middle {
+                top: 0;
+                transform: translate(-50%, 0);
+                padding-top: 20px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .bottomleft { bottom: 10px; }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" onkeydown="return disableDevTools(event);">
+    <div class="bgimg"></div>
+    <div class="overlay"></div>
+    <div class="emoji-bg">
+        <span class="emoji">😂</span> <!-- Laughing -->
+        <span class="emoji">💻</span> <!-- Coding -->
+        <span class="emoji">🤖</span> <!-- AI -->
+        <span class="emoji">😂</span>
+        <span class="emoji">💻</span>
+        <span class="emoji">🤖</span>
+    </div>
+    <div class="topleft">
+        <h2>AB</h2>
+    </div>
+    <div class="middle">
+        <h1 class="typewriter-no-cursor">I am comming with Latest version</h1>
+        <hr>
+        <div class="countdown" id="countdown"></div>
+    </div>
+    <div class="bottomleft">
+        <p>Stay Tuned!</p>
+    </div>
+
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Disable dev tools shortcuts
+        function disableDevTools(event) {
+            if (event.keyCode === 123 || 
+                (event.ctrlKey && event.shiftKey && event.keyCode === 73) || 
+                (event.ctrlKey && event.keyCode === 85)) {
+                event.preventDefault();
+                return false;
+            }
+        }
+
+        // Countdown logic
+        const launchDate = new Date("April 13, 2025 23:59:59");
+        function updateCountdown() {
+            const now = new Date();
+            const timeLeft = launchDate - now;
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            if (timeLeft < 0) {
+                document.getElementById('countdown').innerHTML = "We're Live!";
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Prevent dragging
+        document.addEventListener('dragstart', event => event.preventDefault());
+    </script>
+</body>
+</html>
